@@ -105,8 +105,6 @@ The implementation consists of **26 programs** in total, divided as follows:
 - **Hybrid Compression**: Investigate hybrid approaches that combine multiple techniques based on data characteristics.  
 - **Performance Optimization**: Explore optimizations to improve encoding and decoding speeds, especially for large datasets.
 
-## References  
-- **Data Compression Techniques**: [Data Compression Algorithms](https://en.wikipedia.org/wiki/Data_compression)  
-- **Python Implementation**: [Python Official Documentation](https://python.org)  
+## References   
 - **TPCH Dataset**: [TPCH Benchmark](http://www.tpc.org/tpch/)
 
