@@ -1,7 +1,7 @@
 import sys
 import struct
 
-def encode_rle_int16(input_file, output_file):
+def encode_rle_int8(input_file, output_file):
     with open(input_file, 'r') as infile:
         data = [int(line.strip()) for line in infile]
     
@@ -14,18 +14,18 @@ def encode_rle_int16(input_file, output_file):
                 count += 1
                 i += 1
             
-            outfile.write(struct.pack('<h', value))   # int16 value
-            outfile.write(struct.pack('<H', count))   # unsigned int16 count
+            outfile.write(struct.pack('b', value))  
+            outfile.write(struct.pack('B', count))  
             i += 1
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python program-en-rle-int16.py <input_file>")
+        print("Usage: python program-en-rle-int8.py <input_file>")
         return
 
     input_file = sys.argv[1]
     output_file = f"{input_file}.rle"
-    encode_rle_int16(input_file, output_file)
+    encode_rle_int8(input_file, output_file)
     print(f"Encoded data saved to {output_file}")
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@ data_files = {
     "string": ["l_comment-string.csv", "l_linestatus-string.csv", "l_commitdate-string.csv", "l_receiptdate-string.csv", "l_returnflag-string.csv", "l_shipdate-string.csv", "l_shipinstruct-string.csv", "l_shipmode-string.csv"]
 }
 
-compression_techniques = ["bin","for","dif"]
+compression_techniques = ["bin", "rle", "dic","for","dif"]
 
 def get_file_size(file_path):
     return os.path.getsize(file_path) if os.path.exists(file_path) else 0
